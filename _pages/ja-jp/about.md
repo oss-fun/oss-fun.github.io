@@ -3,16 +3,17 @@ page_id: about
 layout: about
 title: 紹介
 permalink: /
-subtitle: 公立はこだて未来大学システム情報科学部
+subtitle: 公立はこだて未来大学システム情報科学部　高度ICTコース・情報システムコース</br>（大学院　高度ICT領域・情報アーキテクチャ領域）
 
 profile:
   align: right
   image: servers.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>041-8655　北海道函館市</p>
+    <p>亀田中野町 116番地2</p>
+    <p>公立はこだて未来大学127室</p>
+
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -24,8 +25,7 @@ announcements:
 
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+システムソフトウェア研究室では、オペレーティングシステムや仮想マシンなど、社会インフラを支える「縁の下の力持ち」となる基盤ソフトウェア技術の研究開発をしています。
+高度な機能や複雑な制御の抽象化によって、性能を最大限発揮し、コンピュータをより便利で安全にするシステムソフトウェアの実現を目指しています。
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/multi-language-al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+研究成果は、学術分野のみならず、オープンソースソフトウェアコミュニティにも還元することを目指しています。
