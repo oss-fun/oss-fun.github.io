@@ -31,6 +31,17 @@
   abstract = {Wasm has successfully delivered code portability across platforms—but runtime-level capabilities remain coupled to specific implementations. Features such as live migration or resource accounting are often bound to host runtimes, limiting reusability and cross-platform consistency. A self-hosted Wasm runtime, which is itself compiled to Wasm, provides a way to decouple these capabilities from runtimes. Because it is distributed as a Wasm bytecode, it can run on existing runtime. By embedding system-level features inside Wasm modules, such capabilities become runtime-independent and portable—just like Wasm apps. Live migration serves as an example. It depends on memory layouts and execution state in runtimes. A self-hosted runtime relocates this logic into Wasm space, allowing migration to operate across different runtimes without tight coupling. This session presents the design of a self-hosted approach, examines performance trade-offs, and discusses implications for the ecosystem.},
 }
 
+@inproceedings{eurobsdcon2025,
+  author = {Sakaguchi, Souma},
+  title = {Bring Cloud-Native Networking to FreeBSD Jails: Porting Calico from Linux },
+  booktitle = {EuroBSDCon 2025},
+  year = {2025},
+  month = {Sep},
+  abbr= {Oral},
+  website= {https://2025.eurobsdcon.org/},
+  abstract = {While Linux containers benefit from a rich ecosystem of Container Network Interface (CNI) plugins such as Calico and Cilium, FreeBSD Jails have lacked native, standardized solutions for advanced networking. As a result, users have relied on manual, error-prone configurations, which limit scalability and integration with modern orchestration platforms. This presentation introduces porting Calico, a widely adopted CNI plugin, to the FreeBSD operating system. Our approach replaced Linux-specific components with FreeBSD-native equivalents: iptables with ipfw, netlink sockets with routing sockets, and Linux network namespaces with FreeBSD’s vnet. This work aims to bridge the gap between Linux and BSD container networking. By providing scalable, policy-driven capabilities that are compatible with existing Linux-centric infrastructure, FreeBSD will be empowered to participate more fully in the broader container networking ecosystem.}
+}
+
 @inproceedings{japan_community_day_2025,
   author = {Nakata, Yuki and Fujii, Daigo},
   title = {Beyond Portability: Live Migration for Evolving WebAssembly Workloads},
