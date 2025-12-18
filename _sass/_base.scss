@@ -4,20 +4,6 @@
 
 // Typography
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-em,
-div,
-li,
-span,
-strong {
-  color: var(--global-text-color);
-}
 
 hr {
   border-top: 1px solid var(--global-divider-color);
@@ -741,7 +727,7 @@ footer.sticky-bottom {
           display: inline-block;
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
+          color: var(white-color) !important;
 
           a {
             color: white;
