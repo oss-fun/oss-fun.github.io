@@ -212,6 +212,21 @@
   award={ベストポスター賞},
 }
 
+@INPROCEEDINGS{10043504,
+  author={Yoshikawa, Ayano and Matsubara, Katsuya},
+  booktitle={2023 IEEE International Conference on Consumer Electronics (ICCE)}, 
+  title={Circulation of Transformed Image Derivatives with Parameterized Aliasing in the Off-Chain Storage}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-4},
+  keywords={Printing;Privacy;Image resolution;Costs;Image color analysis;Image processing;Digital images;NFT;IPFS;image processing},
+  doi={10.1109/ICCE56470.2023.10043504},
+  abstract = {In major NFT marketplaces, digital image contents such as illustrations and photographs generally reside off-chain due to cost, performance, and privacy concerns. InterPlanetary File System (IPFS), a decentralized storage system, is widely used to store and distribute off-chain data of NFT artworks. Applications of digital images generally require displaying, printing, and redistributing them in a variety of sizes, colors, and formats. Unfortunately, the content addressing in IPFS impedes reusing transformation results derived from an original image since totally different IDs from the original must be given for them. They can never comprehend any relation and transition between the original and derivatives. We introduce on-demand image transform functionality and cooperated ID aliasing capability into IPFS for identifying images generated through a transform with a combination of an original's ID and parameters of the applied transform. Our implementation allows retrieving results of newly demanded transforms by inquiring about corresponding IDs for the aliases to others. A preliminary experimental result demonstrates that the proposed ID aliasing can mitigate the processing overhead by promoting reclaiming of transformed images.},
+  abbr= {International Conf.}
+}
+
+
 @inproceedings{bitvisor22, 
   author = {裕貴 中田}, 
   title = {BitVisorであやつるコンテナネットワーク}, 
@@ -247,6 +262,20 @@
   abstract = "システムの拡張性や可用性などを向上する設計手法のひとつとして，マイクロサービス・アーキテクチャが注目されている．一方，マイクロサービス型システムでは，負荷に応じたスケールアウトなどの対応により，コンポーネントの数やそれらの依存関係が動的に変化する．分散システムの障害が複数要因の組み合わせで起きる傾向とあいまって，これら依存関係の動的変化は，マイクロサービス型システムの監視における障害発生時の状態把握や障害原因の追究を難しくしている．著者らは，依存関係の動的変化をともなう分散システムを対象とした監視において，コンポーネント間の依存関係に着目しつつ，システムの状態を迅速に把握できる可視化手法を提案している．本研究は，マイクロサービス型システムの監視において収集されるメトリックを管理するデータベースとして，グラフ DB の採用を検討する．本稿では，依存関係に着目したシステム状態可視化にともなって発行されるメトリック問い合わせを分析することで，依存関係情報や各メトリックの保存と探索におけるグラフ DB の有用性を議論する．また，監視ツールの評価に用いるためのマイクロサービス型システムの監視テストベッドの構築についても紹介する．",
   abbr = {Domestic},
 }
+
+@INPROCEEDINGS{9382728,
+  author={Shizukuishi, Takuya and Matsubara, Katsuya},
+  booktitle={2021 IEEE/SICE International Symposium on System Integration (SII)}, 
+  title={Efficient Tailoring of Universal Software Components for Conserving Resources: Evaluation in Practical ROS-based System}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={431-436},
+  keywords={Linux;Memory management;Tools;Software;Acceleration;Kernel;Robots},
+  doi={10.1109/IEEECONF49454.2021.9382728},
+  abstract = {The method of development for robot systems is shifting toward rapid and efficient construction utilizing universal software components, such as various common libraries and operating systems, with tailored implementations rather than programming from scratch. The Robot Operating System (ROS), which is becoming widely used as a robotics infrastructure, is built on the Linux operating system, which has been commonly used in PC and server environments. However, many universal software components may contain functionalities and implementation codes that are unnecessary in certain cases, and these may have negative impacts, especially on resource-constrained platforms. Unfortunately, identifying and eliminating unnecessary code appropriately is a difficult process because it requires a deep understanding of the system behavior and implementation details of the component.This study proposes a dynamic analysis method and tools to help determine the necessity of each functionality of the Linux kernel, one of the largest universal software components in a ROS-based system, on the basis of energy and memory consumption. To evaluate the practicality of the proposal, we conduct an experimental application in a practical ROS-based robot system. The results show that even without understanding the details of the whole kernel, memory consumption can be reduced by about 40% by efficiently disabling unnecessary features.},
+  abbr= {International Conf.}
+  }
 
 @inproceedings{osc21, 
   author = {裕貴 中田}, 
@@ -291,6 +320,24 @@
   abbr = {Journal}
 }
 
+@inproceedings{10.1145/3341105.3373913,
+  author = {Shizukuishi, Takuya and Matsubara, Katsuya},
+  title = {An efficient tinification of the linux kernel for minimizing resource consumption},
+  year = {2020},
+  isbn = {9781450368667},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3341105.3373913},
+  doi = {10.1145/3341105.3373913},
+  abstract = {Reusable libraries and rich functional operating systems (OSs) have been significantly improving system development in terms of time-to-market and product quality. On the other hand, such general-purpose software often has code and data that is useless for the target system. Therefore, an optimization mechanism must be developed to efficiently extract only the necessary and sufficient functions from the whole software code.This study aims to support optimizing Linux, which is the most used OS in various systems, including embedded devices. Embedded devices may especially require Linux to be optimized because of limited computing resources and costs. Linux Kernel Config allows unnecessary functions to be removed explicitly during system building. Nevertheless, an optimal configuration setting is hard to specify manually for each target system because there are about 10,000 selectable config options in the Linux Kernel Config. We propose a method to automatically estimate the effect on the memory usage and power consumption of each Kernel Config option in a target system. Results of an experiment show our method makes it possible to automatically specify config options that could be disabled to effectively shrink resource usage for a target system.},
+  booktitle = {Proceedings of the 35th Annual ACM Symposium on Applied Computing},
+  pages = {1228–1237},
+  numpages = {10},
+  keywords = {Linux kernel tinification, embedded systems, software tailoring},
+  location = {Brno, Czech Republic},
+  series = {SAC '20},
+  abbr= {International Conf.},
+}
 
 @inproceedings{weko_208087_1,
   author	 = "裕貴 中田 and 克弥 松原 and 亮介 松本",
@@ -318,6 +365,21 @@
   abbr= {Domestic},
   award={優秀ポスター賞}
 }
+
+@INPROCEEDINGS{9202504,
+  author={Matsubara, Katsuya and Takagawa, Yuhei},
+  booktitle={2020 IEEE 44th Annual Computers, Software, and Applications Conference (COMPSAC)}, 
+  title={Adaptive OS Switching for Improving Availability During Web Traffic Surges: A Feasibility Study}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={1176-1182},
+  keywords={Linux;Switches;Web servers;Benchmark testing;Kernel;High availability, HTTP 502/503/504 server errors, C10K problem, process migration, heterogeneous operating systems},
+  doi={10.1109/COMPSAC48688.2020.00-97},
+  abstract = {Web services have seen early adoption and rapid growth with the introduction of various web system frameworks, and not only large companies but also smaller businesses or individuals can provide their own web services offering access to their products, entertainment, and information. Therefore, as the number of Internet users increases, especially with the spread of smartphones, even relatively small web service infrastructure need to have both high access performance and availability, although the cost of additional computational resources and redundant servers may be hard to bear depending on the load. We focus on the fact that the performance characteristics may differ depending on the internal implementation of the operating system (OS), even when the available computing resources are the same. This paper investigates the possibility of developing a system that achieves both high access performance and availability of the web server by dynamically switching the OS on which the web server is running, without requiring additional computing resources or using redundant servers. This paper identifies the differences between Linux and FreeBSD in terms of network processing and describes the mechanism of process migration among heterogeneous OSes to switch the OSes. It then demonstrates the feasibility of our approach with experimental results on the performance characteristics and load tolerance of a web server in operation when the OSes are dynamically switched.},
+  abbr= {International Conf.}
+}
+
 @inproceedings{osc20, 
   author = {裕貴 中田}, 
   title = {「おいしくてつよくなる」eBPFのはじめかた}, 
@@ -355,6 +417,36 @@
   URL="https://cir.nii.ac.jp/crid/1520853833389679360",
   abbr= {Domestic},
 }
+
+@INPROCEEDINGS{9006661,
+  author={Matsubara, Katsuya and Sato, Atsuya},
+  booktitle={2019 Twelfth International Conference on Mobile Computing and Ubiquitous Network (ICMU)}, 
+  title={An Access Control Mechanism for Pre-trained ML Models in Mobile Apps}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Machine learning;Androids;Humanoid robots;Access control;Artificial neural networks;Runtime;Data models;machine learning inference;Android;smart-phone;access control},
+  doi={10.23919/ICMU48249.2019.9006661},
+  abstract = {Utilizing machine learning inference in mobile platforms have been made realistic since recent smartphones may have high-performance processors and hardware accelerators of signal and image processing. However, it could bring issues. One of the most significant issues is that any machine learning inferences can be unlimitedly applied to personal data which once the application got permitted to. Furthermore, it could be quite hard to understand the behavior of a `pre-trained' machine learning model and the behavior of an installed application can be transparently modified afterword by replacing a used model. This research aims to implement access control against such functionalities of machine learning inference for mobile platforms. In this paper, we describe how to verify used pre-trained models and how to implement permission control at Android Neural Networks API for Android as a target platform. And we also show an evaluation result with a prototype implementation.},
+  abbr= {International Conf.}
+}
+
+@INPROCEEDINGS{8607261,
+  author={Morita, Ren and Matsubara, Katsuya},
+  booktitle={2018 IEEE 24th International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA)}, 
+  title={Dynamic Binding a Proper DDS Implementation for Optimizing Inter-Node Communication in ROS2}, 
+  year={2018},
+  month={Aug},
+  volume={},
+  number={},
+  pages={246-247},
+  keywords={Robots;Quality of service;Loading;Reliability;Conferences;Operating systems;Publish-subscribe;Robot Operating System;ROS2;Data Distribution Service;Publish-Subscribe Messaging},
+  doi={10.1109/RTCSA.2018.00043},
+  abstract = {ROS2 (Robot Operating System 2.0) has been being developed from scratch in order to support new applications. One of the most significant change in ROS2 is to follow the DDS standard specification as an interface of the inter-module communication. Currently some of companies and OSS communities provide DDS implementations which have different characteristics such as using the shared memory. The current implementation of ROS2 allows to specify only one DDS implementation to be used in a system through application code or the environment variable at running, nevertheless each communication may have different characteristics and each DDS implementation may be optimized for different communication types. This research proposes a mechanism to allow multiple DDS implementations existing in a system and to dynamically bind one into each communication. The proposed mechanism can estimate communication area, maximum data size, requirement of the QoS control, for each communication channel and then it can select a proper DDS implementation. We clarify that the current available DDS implementations have different characteristics, and then describe implementation of the DDS dynamic binder mechanism.},
+  abbr= {International Conf.}
+}
+
 
 @inproceedings{bitvisor17, 
   author = {裕貴 中田 and 克弥 松原}, 
