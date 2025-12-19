@@ -4,6 +4,7 @@
   author = {Nakata, Yuki and Matsubara, Katsuya},
   title = {Self-Hosted WebAssembly Runtime for Runtime-Neutral Checkpoint/Restore in Edge-Cloud Continuum},
   year = {2025},
+  month = {Dec},
   isbn = {9798400723018},
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
@@ -17,6 +18,35 @@
   location = {Vanderbilt University, Nashville, TN, USA},
   series = {Mid4CC '25},
   abbr = {International Conf.},
+  selected= true,
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:02005946,
+ author	 = "優月 齊藤 and 大悟 藤井 and 克弥 松原 and 裕貴 中田",
+ booktitle = {コンピュータシステム・シンポジウム論文集},
+ month = {Nov},
+ abstract = {WebAssembly(Wasm)コンテナは，OS，CPUアーキテクチャに依存しない軽量な隔離実行環境であり，エッジコンピューティングにおけるアプリケーション実行基盤として注目されている．Wasmを実行するランタイムには，計算性能やメモリ使用量など，特性の異なる実装が存在するため，各計算機の状況に応じてこれらを使い分けることで，エッジコンピューティングの計算機環境を活用できる．Wasmサンドボックス内部の状態を異なるランタイム間で保存，復元することが可能な先行研究と，コンテナオーケストレータのヒーリング機能を統合することで，メモリ使用量等，状況に適したランタイムへの動的な切り替えが可能である．現在，多くのクラウドアプリケーションはへのアクセスが必須であり，Wasmは，Wasm System Interface(WASI)を介すことで，ホストのネットワークにアクセスする．しかし，WASIを介したネットワークへのアクセス状態は，Wasmサンドボックス外部の状態であるため，先行研究の手法では，ネットワークにアクセスするWasmアプリケーションの状態を復元できない．本研究では，ネットワークへのアクセス状態を含むWasmアプリケーションのマイグレーションを実現する手法を提案する．Wasm仮想マシン内部の状態に加え，WASIを介してアクセスしたソケットの状態を保存・復元することで，ネットワークへのアクセス状態を含むマイグレーションを可能にする．これによって，ネットワークにアクセスするクラウドアプリケーションの，柔軟なオーケストレーションを実現する．},
+ pages = {28--32},
+ publisher = {情報処理学会},
+ title = {WebAssemblyコンテナ・オーケストレーションにおける通信状態の異種ランタイム間移送},
+ volume = {2025},
+ year = {2025},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/2005946},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:02005951,
+ author = {誠也 岩崎 and 克弥 松原},
+ booktitle = {コンピュータシステム・シンポジウム論文集},
+ month = {Nov},
+ abstract = {ublk (Userspace block device driver)は，Linuxにおいて，ユーザー空間からブロックデバイスのロジックを実装するための汎用フレームワークであり，カーネルでは利用できないライブラリの使用や，複雑なカーネルプログラミングの回避など，運用および開発面で大きな利点を持つ．しかし，ublkで実装されたブロックデバイスのロジックは，ユーザー空間に存在するため，通常はカーネルが管理するページキャッシュを間接的にしか利用できないという制約が存在する．本研究では，Linuxにおけるページキャッシュをユーザープロセスからセクタ単位・番号指定によって直接利用する機構を提案する．この機構により，ユーザー空間で動作するublkブロックデバイスロジックが，柔軟にページキャッシュを取得・保存できる．有用性評価のため，分散ファイルシステムであるIPFS (InterPlanetary File System)を活用した，P2P型ネットワークブートのためのディスクイメージの分散管理システムへ適用することで，提案機構の評価を行う．},
+ pages = {81--87},
+ publisher = {情報処理学会},
+ title = {ublkcache: Linux ublkストレージに対するカーネル内ページキャッシュ利活用機構},
+ volume = {2025},
+ year = {2025},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/2005951},
 }
 
 @inproceedings{wasmcon-na,
@@ -54,15 +84,41 @@
   abstract = {WebAssembly (Wasm) is known for its platform-neutral execution, letting the same program run across devices, edge systems, and the cloud without platform-specific changes. Thanks to an active and growing community, we now have a rich set of runtimes optimized for various environments—making Wasm more versatile and efficient than ever. But what if Wasm could go beyond static portability and become truly dynamic? In this talk, we explore live migration between different Wasm runtimes, allowing workloads to move at runtime—for example, following a user across networks or shifting to another platform under high load. This isn't easy. Runtimes differ in how they represent execution state, and optimizations like JIT or AOT make migration tricky. To tackle this, we're experimenting with two research approaches: (1) converting runtime-internal execution states, and (2) adding migration-aware features through a self-hosted Wasm runtime. We'll share what we've learned and the challenges we've faced, as we explore how we can help advance the Wasm ecosystem.},
 }
 
-@techreport{os167,
+@inproceedings{os167,
   author = {裕貴 中田 and 克弥 松原},
   issue = {9},
   month = {May},
   title = {JIT/AOTコード最適化と両立するWebAssemblyライブマイグレーション実現手法の検討},
+  booktitle = {研究報告システムソフトウェアとオペレーティング・システム（OS）},
   year = {2025},
   slides = {https://speakerdeck.com/chikuwait/os167},
   abbr = {Domestic},
   abstract = {エッジコンピューティングでは，デバイス・エッジサーバ・クラウドサーバといった特性の異なる処理ノードを使い分けることが重要である．柔軟な処理ノード選択を実現する技術としてライブマイグレーション技術があるが，各ノードはアーキテクチャが異なるため，特に実行状態をともなうライブマイグレーションの実現が難しい．WebAssembly（Wasm）は，アーキテクチャ中立性による多様なプラットフォーム上でのバイトコード実行を可能にする．さらに，特定の処理ノードに特化したランタイム実装や，JIT/AOTコード最適化による実行性能を最適化できるランタイムも存在するため，エッジコンピューティングにおける共通アプリケーション実行基盤として注目されている．しかしながら，多様なランタイムと性能最適化は，各ランタイムが保持するアプリケーション実行状態が異なる形式・内容となるため，複数ランタイム間でのライブマイグレーションが困難になる．本研究では，多様なランタイムと性能最適化による実行状態表現の異種性に対処するために，セルフホスト型Wasmランタイムを用いたライブマイグレーション手法を提案する．任意のランタイム上で動作可能なセルフホストランタイムがアプリケーション実行状態を保存・復元することで，アプリケーション実行状態表現を統一化し，異なるランタイム間でのライブマイグレーションを実現できる．本稿では，ランタイムと実行最適化方式に中立なライブマイグレーション実現のためのセルフホストランタイムのプロトタイプ実装とそのアプリケーション実行性能の評価結果について報告する．},
+  website= {https://ipsj.ixsq.nii.ac.jp/records/2002120}
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:02001159,
+ author = {大悟 藤井 and 至音 木田 and 克弥 松原},
+ issue = {2},
+ month = {Mar},
+ abstract = {マイクロコントローラ(MCU)におけるエッジコンピューティングは，通信のオーバーヘッド削減，プライバシー向上，リアルタイム処理の実現といった利点から注目を集めている．しかし，MCUベースの処理には，計算リソースの制約，電力消費の制限，フォールトトレランスの確保といった課題がある．これらの課題に対処するために，MCUとより高性能なマイクロプロセッサユニット(MPU)間のライブマイグレーションが有効である．異種OS・異種ISA間でのライブマイグレーションを実現するには，実行状態の違いを吸収しつつ，オーバーヘッドを最小限に抑える必要がある．本研究では，この問題の解決策としてWebAssembly (Wasm)に着目する．Wasmは，プラットフォーム非依存のバイトコード形式を提供し，OSやISAの違いを抽象化できるため，異種環境間のマイグレーションに適している．また，組み込みデバイス向けの軽量なWasmランタイムであるWebAssembly Micro Runtime (WAMR)は，軽量であるためメモリにおけるオーバーヘッドを抑えられる．本研究では，WAMRにC/R機能を実装し，ESP32 MCUとLinux上のMPU間でのライブマイグレーションを実現する．},
+ title = {WebAssemblyを用いたMCU-MPUプラットフォーム間ライブマイグレーションの検討},
+ year = {2025},
+ abbr = {Domestic},
+ booktitle = {研究報告組込みシステム（EMB）},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/2001159},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:02000715,
+ author = {侑亮 西 and 克弥 松原},
+ issue = {29},
+ month = {Feb},
+ abstract = {教育機関におけるプログラミングなどの演習授業において，統一化されたPC環境の提供は重要である．近年，オンライン授業への対応が進んだ経緯から，従来のPC教室に変わって，クラウド上の仮想マシンを各学生に提供する試みがある．一方，授業ごとの仮想マシンの設定変更などは授業時間中に行われ，そのトラブルシューティングが授業進行を妨げている．仮想マシンの設定や制御をスクリプトコードで管理できるInfrastructure as Code（IaC）は，仮想マシンのカスタマイズを自動化できるが，基盤となるクラウドシステムがコマンドラインインターフェース（CLI）を提供している必要がある．しかし，教育機関向けにカスタマイズされたクラウドシステムでは，CLIが利用できない場合がある．本研究では，著者らが所属する公立はこだて未来大学で利用している教育用クラウドシステムを対象として，クラウド基盤が持つCLIが利用できない場合でもIaCに対応できる手法を確立する．また，各学生が持つBYOPCが多種多様なことに対応するため，IaCフレームワークの機能をFunction as a Service（FaaS）として実装し，シンプルなコマンドのみで利用できるようにした．本稿では，IaC対応の実現手法を述べるとともに，実際の授業で活用し有効性を検証する．},
+ title = {独自管理インターフェースを持つ教育用クラウドシステムのIaC対応},
+ year = {2025},
+ abbr = {Domestic},
+ booktitle = {研究報告インターネットと運用技術（IOT）},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/2000715},
 }
 
 @inproceedings{sec2024,
@@ -89,6 +145,7 @@
   month	 = {Dec},
   booktitle = {情報処理学会第36回コンピュータシステム・シンポジウム},
   abbr= {Domestic},
+  website={https://sigos.ipsj.or.jp/event/comsys2024/posters/ComSys_2024_poster_20.pdf}
 }
 
 @inproceedings{weko_240811_1,
@@ -102,6 +159,7 @@
    month	 = {oct},
    abbr= {Domestic},
    abstract ={クラウドにおける軽量なアプリケーション実行環境として普及しているコンテナ型仮想化は，コンテナ間およびコンテナとホスト間でOS カーネルを共有する．コンテナ仮想化における重大なセキュリティリスクのひとつは，OS カーネルの脆弱性を悪用することによる他コンテナやホスト環境への攻撃である．特に，コンテナシステムはLinux 環境を対象にした実装が多く，Linux カーネルの脆弱性がコンテナ隔離の脆弱性に直結する．本研究は，コンテナホストに異種OS を採用することで，低オーバヘッドでLinux コンテナの隔離を強化する手法の確立を目指している．本稿では，FreeBSD 独自のセキュリティ機能であるCapsicum をLinux アプリケーションへ透過的に適用することで，Linux コンテナにおける攻撃面の縮小化を実現する手法を提案する．},
+  website={https://ipsj.ixsq.nii.ac.jp/records/240811},
 }
 
 @inproceedings{apsys2024,
@@ -114,6 +172,7 @@
   address = {New York, NY, USA},
   location = {<city>Kyoto</city>, <country>Japan</country>},
   abbr= {International Conf.},
+  website= {https://apsys2024.github.io/posters/apsys24posters-final73.pdf};,
 }
 
 @inproceedings{jssst,
@@ -145,6 +204,7 @@
   keywords = {Application checkpointing, Wasm, live migration},
   location = {<city>Athens</city>, <country>Greece</country>},
   abbr= {International Conf.},
+  selected= true,
 }
 
 @article{published_papers/46105696,
@@ -156,6 +216,7 @@
   year = {2024},
   abstract = {Container virtualization technologies such as Docker [1] are now widely used as lightweight application execution environments in cloud services. They are based on OS pro- cesses, which are lightweight compared with traditional VMs, resulting in faster startup and a lower memory footprint. Many cloud services [2], [3] take advantage of the characteristics of containers for rapid scale-out, scale-in, and more efficient resource usage. We aim to achieve a container sandbox with Container Transplantation in which Linux containers run compatibly in another OS and apply another OS-specific security mechanism to resolve the trade-off between robust container isolation and container characteristics and application performance. Since many cloud services utilize Linux as the environment for hosting containers, vulnerabilities in the Linux kernel and its functions are directly linked to container vulnerabilities. Unfortunately, attacks that exploit those vulnerabilities often have fatal adverse effects that make it impossible for cloud services to run correctly, such as unauthorized access to hosts and other containers through privilege escalation and the theft of sensitive information. We have proposed that executing Linux containers in another OS can avoid these various attacks that exploit vulnerabilities related to the Linux kernel and its functionality. Moreover, it is possible to apply unique security models and functions implemented in various OSes to Linux containers to achieve more finely-grained access control and isolation between containers resilient to attacks targeting specific OSes. This paper investigates the possibility of resisting attacks using Linux kernel vulnerabilities through the Linux jails. Among the vulnerabilities in Linux Kernel 4.4, emulated by Linux jails on FreeBSD13.2, we have chosen those that the Linuxulator can emulate. Then, we categorized the Linux kernel vulnerabilities that the secure container must be able to avoid, tried the attacks on both Linux and the Linuxulator, and summarized the success or failure of the attacks. Linux- ulator, and summarized the success or failure of the attacks. Our experimental results illustrate that the Linuxulator can efficiently repel exploits against Linux kernel vulnerabilities.},
   abbr= {International Conf.},
+  website= {https://2024.asiabsdcon.org/program/_p04b/paper.pdf},
 }
 
 @inproceedings{oai:ipsj.ixsq.nii.ac.jp:00233036,
@@ -167,6 +228,7 @@
  year = {2024},
  booktitle = {研究報告インターネットと運用技術（IOT）},
  abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/233036},
 }
 
 @inproceedings{dsw, 
@@ -208,19 +270,44 @@
   keywords = {capability-based security and system call emulation, container security},
   location = {Seoul, Republic of Korea},
   abbr= {International Conf.},
-  month={Aug}
+  month={Aug},
+  selected= true,
 }
 
 @inproceedings{xsig,
   author = {進太郎 鈴木 and 裕貴 中田 and 克弥 松原},
   title = {異種OS機能連携によるセキュアコンテナ実現に向けた予備評価},
   year = {2023},
-  url = {https://xsig.ipsj.or.jp/2023/},
+  website = {https://xsig.ipsj.or.jp/2023/},
   month	 = "Aug",
   booktitle = {xSIG (cross-disciplinary workshop on computing Systems, Infrastructures, and programminG) 2023},
   publisher = {情報処理学会},
   abbr= {Domestic},
   award={ベストポスター賞},
+}
+
+@techreport{oai:ipsj.ixsq.nii.ac.jp:00225558,
+ author = {翔大 柿本 and 克弥 松原 and 英希 高瀬},
+ issue = {51},
+ month = {Mar},
+ abstract = {ロボットソフトウェアの開発において，Robot Operating System（ROS）の利用が拡大している．ROS は，クラウドサーバと連携した分散型のロボットシステムの構築にも有用であるが，各機能モジュールであるノードの配置はシステム稼働前に決める必要がある．しかし，システム稼働前に推測困難な状況変化により，システム起動時に決めたノード配置が最適でなくなる可能性がある．さらに，クラウドとロボットでは，CPU アーキテクチャが異なる場合が多く，稼働中のノードを実行状態とともにクラウド・ロボット間で再配置することは技術的に難しいという課題がある．本研究では，ROS ノードの動的配置機構の検討を目的として，組込みデバイス向け ROS 2 ランタイム実装である mROS 2 を WebAssembly ランタイム上で動作させることで，アーキテクチャ中立な ROS ノード実行状態を実現する．本稿では，mROS 2 を WebAssembly 上で動作させるために実装すべき機能を明らかにして，WebAssembly 化による実行時性能への影響を実験結果により示す．},
+ title = {クラウド連携を対象としたアーキテクチャ中立なROSランタイムの検討},
+ year = {2023},
+ abbr = {Domestic},
+ booktitle = {研究報告組込みシステム（EMB）},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/225558},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00224276,
+ author = {克弥 松原 and 龍信 吉田},
+ issue = {14},
+ month = {Feb},
+ abstract = {エッジコンピューティング基盤の実現技術として，VM・コンテナと比較して起動が速く，メモリ消費量も小さい WebAssembly が注目されている．しかし，エッジコンピューティングの活用が期待される自動運転車やスマートシティにおけるリアルタイム処理を可能にするには，さらに起動速度を向上させる必要がある．また，エッジにおいて同時に多くのプログラムを実行するには，メモリ消費量をさらに削減する必要がある．本研究では，WebAssembly 実行時の WebAssembly ランタイムの冗長さに着目し，それらを 1 つにまとめることでオーバーヘッドを削減する．本稿では，複数の WebAssembly 実行を 1 プロセスに集積する機能を実現し，1 プロセスに集積された各 WebAssembly サンドボックスを既存コンテナ管理システムで制御するための実装検討について述べる．また，複数の WebAssembly 実行を 1 プロセスに集積した場合の効果について，プロトタイプ実装を用いたベンチマーク計測の結果を示して評価する．},
+ title = {エッジサーバでの利用を想定したWebAssemblyサンドボックスの軽量化検討},
+ year = {2023},
+ abbr = {Domestic},
+ booktitle = {研究報告システムソフトウェアとオペレーティング・システム（OS）},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/224276},
 }
 
 @INPROCEEDINGS{10043504,
@@ -234,9 +321,25 @@
   keywords={Printing;Privacy;Image resolution;Costs;Image color analysis;Image processing;Digital images;NFT;IPFS;image processing},
   doi={10.1109/ICCE56470.2023.10043504},
   abstract = {In major NFT marketplaces, digital image contents such as illustrations and photographs generally reside off-chain due to cost, performance, and privacy concerns. InterPlanetary File System (IPFS), a decentralized storage system, is widely used to store and distribute off-chain data of NFT artworks. Applications of digital images generally require displaying, printing, and redistributing them in a variety of sizes, colors, and formats. Unfortunately, the content addressing in IPFS impedes reusing transformation results derived from an original image since totally different IDs from the original must be given for them. They can never comprehend any relation and transition between the original and derivatives. We introduce on-demand image transform functionality and cooperated ID aliasing capability into IPFS for identifying images generated through a transform with a combination of an original's ID and parameters of the applied transform. Our implementation allows retrieving results of newly demanded transforms by inquiring about corresponding IDs for the aliases to others. A preliminary experimental result demonstrates that the proposed ID aliasing can mitigate the processing overhead by promoting reclaiming of transformed images.},
-  abbr= {International Conf.}
+  abbr= {International Conf.},
+  month = {Jan},
+  selected= true,
 }
 
+@article{松原 克弥2022,
+  title={動的なOS切替え実現を目指したFreeBSDにおけるLinuxプロセスのマイグレーション機構},
+  author={克弥 松原 and 雄平 髙川},
+  journal={コンピュータ ソフトウェア},
+  volume={39},
+  number={1},
+  pages={1_18-1_32},
+  year={2022},
+  month={Feb},
+  doi={10.11309/jssst.39.1_18},
+  abbr = {Journal},
+  abstract = {コンピュータ技術進歩の過程において，基盤ソフトウェアであるオペレーティングシステム(OS)の研究開発が盛んに行われ，数多くのOS実装が利用可能となった．デスクトップPCやスマートフォン，エンタープライズサーバなどの一部のプラットフォーム向けでは，WindowsやLinuxなどの少数のOSが寡占状態にあるが，すべてのシステムにおいて特定のOSが独占して採用されることはなく，現在でも，システムの目的や用途，プラットフォームの特性などに応じて複数のOSを使い分けている．著者らは，特性の異なる複数のOSを状況の変化に応じて動的に切り替えることで，OS上で稼働するサービスの負荷耐性や性能の改善を試みる手法を提案している．本論文では，LinuxとFreeBSDを対象として，サービス稼働中にそのシステム基盤であるOSの動的な切り替えを可能とすることを目的として，FreeBSDにおけるLinux互換プロセスのマイグレーション機構の実現手法についてまとめる．Linuxにおけるプロセスマイグレーション機構の標準ツールであるCRIUとのチェックポイントデータの相互互換性を維持することで，LinuxとFreeBSD間で同一のプロセスをマイグレーションする仕組みを実現する．本実現法では，FreeBSDカーネルとLinuxカーネルのOS機能の違いだけでなく，内部構造やインタフェース仕様の違いにも着目し，CRIUの各機能と同等の機能をFreeBSD上で実現する際の課題や実装の詳細を述べる．},
+  selected = true,
+}
 
 @inproceedings{bitvisor22, 
   author = {裕貴 中田}, 
@@ -260,44 +363,128 @@
   month	 = "nov",
   abstract = "クラウドサービスにおけるアプリケーション実行環境として広く活用されているコンテナ型仮想化は，不特定多数のユーザが単一のホスト内に同居するため，コンテナ間の隔離を強固にする必要がある．しかし，追加の隔離環境は，堅牢なコンテナ間隔離を実現する代わりに，コンテナの高速な起動という特性やアプリケーション性能が損なわれる．このトレードオフを解消するために，我々は異種 OS 機能連携によって OS カーネルの脆弱性を悪用した攻撃を回避し，異種 OS 固有のセキュリティ機能を利用できるセキュアコンテナの実現を目指している．本稿では，FreeBSD の OS 機能を活用した Linux コンテナ互換実行と FreeBSD 固有のセキュリティ機能の適用について検討し，異種 OS 機能連携による特定 OS カーネルを対象にした攻撃回避の実現可能性について議論する．",
   abbr = {Domestic},
+  website= {https://ipsj.ixsq.nii.ac.jp/records/222709},
 }
 
-@inproceedings{weko_209511_1,
-  author	 = "七菜 宮越 and 友佳 林 and 裕貴 中田 and 克弥 松原",
-  title	 = "マイクロサービス型システムの監視におけるグラフDB採用によるメトリック問い合わせ最適化の検討",
-  booktitle = "研究報告インターネットと運用技術（IOT）",
-  year 	 = "2021",
-  institution	 = "公立はこだて未来大学, 公立はこだて未来大学, 公立はこだて未来大学, 公立はこだて未来大学",
-  number	 = "16",
-  month	 = "feb",
-  abstract = "システムの拡張性や可用性などを向上する設計手法のひとつとして，マイクロサービス・アーキテクチャが注目されている．一方，マイクロサービス型システムでは，負荷に応じたスケールアウトなどの対応により，コンポーネントの数やそれらの依存関係が動的に変化する．分散システムの障害が複数要因の組み合わせで起きる傾向とあいまって，これら依存関係の動的変化は，マイクロサービス型システムの監視における障害発生時の状態把握や障害原因の追究を難しくしている．著者らは，依存関係の動的変化をともなう分散システムを対象とした監視において，コンポーネント間の依存関係に着目しつつ，システムの状態を迅速に把握できる可視化手法を提案している．本研究は，マイクロサービス型システムの監視において収集されるメトリックを管理するデータベースとして，グラフ DB の採用を検討する．本稿では，依存関係に着目したシステム状態可視化にともなって発行されるメトリック問い合わせを分析することで，依存関係情報や各メトリックの保存と探索におけるグラフ DB の有用性を議論する．また，監視ツールの評価に用いるためのマイクロサービス型システムの監視テストベッドの構築についても紹介する．",
+@article{瀧本 恒平2022,
+  title={ROSロボットと連動するVOD型e-Learningシステムの実現},
+  author={恒平 瀧本 and 克弥 松原 and 昭二 鈴木},
+  journal={ロボティクス・メカトロニクス講演会講演概要集},
+  volume={2022},
+  number={ },
+  pages={2P2-S07},
+  year={2022},
+  month={Jul},
+  doi={10.1299/jsmermd.2022.2P2-S07},
   abbr = {Domestic},
+  abstract = {ROS, an open source robot control software platform, is widely used for robot development. Accordingly, robot development engineers are required to have skills in robot control programming using ROS, but in most of the existing ROS-learning contents, it is not possible to confirm that the program and the robot are running in synchronization in the real world at hand. Therefore, we may lose the significance of checking at hand, such as understanding the difference between the virtual world and the physical world. In this study, we propose an e-Learning system for ROS programming that links a lecture-style video with an actual robot at hand. By measuring the latency from the time the video is played to the time the actual robot at hand starts to move, we demonstrated the practicality of the system and summarized the problems and future prospects.},
 }
 
-@INPROCEEDINGS{9382728,
-  author={Shizukuishi, Takuya and Matsubara, Katsuya},
-  booktitle={2021 IEEE/SICE International Symposium on System Integration (SII)}, 
-  title={Efficient Tailoring of Universal Software Components for Conserving Resources: Evaluation in Practical ROS-based System}, 
-  year={2021},
-  volume={},
-  number={},
-  pages={431-436},
-  keywords={Linux;Memory management;Tools;Software;Acceleration;Kernel;Robots},
-  doi={10.1109/IEEECONF49454.2021.9382728},
-  abstract = {The method of development for robot systems is shifting toward rapid and efficient construction utilizing universal software components, such as various common libraries and operating systems, with tailored implementations rather than programming from scratch. The Robot Operating System (ROS), which is becoming widely used as a robotics infrastructure, is built on the Linux operating system, which has been commonly used in PC and server environments. However, many universal software components may contain functionalities and implementation codes that are unnecessary in certain cases, and these may have negative impacts, especially on resource-constrained platforms. Unfortunately, identifying and eliminating unnecessary code appropriately is a difficult process because it requires a deep understanding of the system behavior and implementation details of the component.This study proposes a dynamic analysis method and tools to help determine the necessity of each functionality of the Linux kernel, one of the largest universal software components in a ROS-based system, on the basis of energy and memory consumption. To evaluate the practicality of the proposal, we conduct an experimental application in a practical ROS-based robot system. The results show that even without understanding the details of the whole kernel, memory consumption can be reduced by about 40% by efficiently disabling unnecessary features.},
-  abbr= {International Conf.}
-  }
+@article{大野 和也2022,
+  title={通信機構の動的切り替えによるROS2ノードモジュール間通信の最適化},
+  author={和也 大野 and 錬 森田 and 克弥 松原 and 昭二 鈴木},
+  journal={ロボティクス・メカトロニクス講演会講演概要集},
+  volume={2022},
+  number={ },
+  pages={1P1-Q11},
+  year={2022},
+  month={Jul},
+  doi={10.1299/jsmermd.2022.1P1-Q11},
+  abbr = {Domestic},
+  abstract = {In the ROS, which is middleware for developing robot control systems, the programs that realize the robot functions are treated as nodes. In ROS 2, the latest version of ROS, communication between nodes is realized by DDS, and several vendors provide DDS implementations with different characteristics. However, in the current ROS 2, only one DDS implementation can be selected per system. Therefore, it is difficult for all nodes to communicate with each other using the optimal DDS implementation due to characteristics such as data size and communication range. In this research, we propose a mechanism called“DDS Binder”that switches the appropriate DDS implementation for each communication path between nodes. We realized the switching of DDS implementations under the constraint that only one DDS implementation can be used simultaneously in one node, and the latency measurement results showed that the inter-node communication was optimized.},
+}
 
-@inproceedings{osc21, 
-  author = {裕貴 中田}, 
-  title = {SKBパケット選抜総選挙 〜 僕たちは誰について行けばいい？}, 
-  booktitle = {Open Source Conference 2021 Online Hokkaido}, 
-  year = {2021}, 
-  month = {Jun}, 
-  abbr2= {Oral},
-  website= {https://event.ospn.jp/osc2021-online-do},
-  slides = {https://speakerdeck.com/chikuwait/osc21do},
-  abbr= {Oral},
+@article{oai:ipsj.ixsq.nii.ac.jp:00217937,
+ author = {克弥 松原 and 友佳 林 and 卓耶 雫石 and 知寛 川谷},
+ issue = {5},
+ journal = {情報処理学会論文誌},
+ month = {May},
+ abstract = {日常生活のなかで実践が求められているCOVID-19感染対策の1つに，行動履歴の管理がある．COVID-19感染者の行動履歴は，感染経路や接触者の特定につながる重要な情報源となる．しかし，記憶のみを頼りとした滞在履歴の想起は精度に課題があり，自治体などから推奨されている帳票による行動履歴記録も普及していない．本研究では，特に大学キャンパス滞在時における行動履歴の記録を支援することを目的として，キャンパス内に設置したBLEビーコンと入構者が所有するスマートフォンを用いて，手間や負担の少ない高精度な滞在履歴記録を実現する．これまでの他の接触確認システムと異なり，データ収集管理を行うサーバを必要とせず，スマートフォンのみに滞在履歴を記録する本システムは，行動監視や情報漏えいに対するシステム利用者の不安と導入時のシステム構築や情報管理に対する負担の両方を軽減できる．本論文では，実装システム導入後の対象学生に対するアンケートと被験者実験の結果から，個人情報保護に配慮した本システム設計の正当性，および，日常の行動履歴記録に対する意識向上と想起できる滞在履歴の精度向上に対する本システムの貢献を確認できた．},
+ pages = {1249--1263},
+ title = {大学におけるCOVID-19対策としてのITを用いた行動履歴記録支援},
+ volume = {63},
+ year = {2022},
+ abbr = {Journal},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/217937},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00217327,
+ author = {咲太朗 山田 and 克弥 松原},
+ issue = {5},
+ month = {Mar},
+ abstract = {クラウド等で稼働するシステムの可用性を向上させる手段として，プロセス・マイグレーション技術が広く用いられている．ネットワーク通信をともなう実行プロセスをマイグレーションする場合，移送すべきプロセスの実行状態として，確立されている TCP ネットワークコネクションが含まれる．Linux の標準プロセスマイグレーション・ツールである CRIU では，マイグレーション対象のプロセスに対する新たなネットワークコネクション要求を遮断したのち，対象プロセスに対応する TCP プロトコルスタックの送受信キューに残るデータを OS カーネルから取り出すことにより，TCP ネットワークコネクションの状態をマイグレーションできる．負荷分散を目的としたプロセスマイグレーションでは，高負荷状態のプロセスがマイグレーション対象になることが想定されるが，Web サーバ等のネットワークシステムにおける高負荷プロセスは，保持している TCP ネットワークコネクションの数も多くなる．その結果，前述のマイグレーション処理にかかるオーバヘッドがネットワークコネクション数に比例して増加するため，マイグレーションにともなうシステム・ダウンタイムに多大な影響を与える．本研究は，TCP ネットワークコネクションに対するマイグレーション処理の最適化手法を検討する．本検討では，CRIU における TCP ネットワークコネクションのマイグレーション処理を分析して，オーバヘッドが大きい処理を特定し，コネクション数に比例してオーバヘッドが増加しない，スケーラブルな処理方式と置き換えることで，マイグレーションにともなうシステム・ダウンタイムを最小限に抑えることを目指す．},
+ title = {TCPネットワークコネクションのスケーラブルなライブマイグレーション機構},
+ year = {2022},
+ booktitle = {研究報告システムソフトウェアとオペレーティング・システム（OS）},
+ abbr = {Domestic},
+  website= {https://ipsj.ixsq.nii.ac.jp/records/217327},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00221778,
+ author = {慎太郎 渡邊 and 克弥 松原},
+ booktitle = {第84回全国大会講演論文集},
+ issue = {1},
+ month = {Feb},
+ abstract = {家庭内，病院，工事現場や農地などの様々な場所へのロボット導入が進んでいる．適用分野の拡大やロボットの高機能化・スマート化にともなって，従来のロボットエンジニアだけでなく，様々な専門をもつエンジニアがロボット開発に関係することが増えている．これら複合チームによるロボット開発において，ロボットプログラミングに関するスキルの違いが開発効率に影響することが懸念される．本研究では，効率的な知識共有と高い教育効果が期待できるモブプログラミング手法に着目して，ロボットプログラミング学習へ適用することを検討する．本稿では，ロボットプログラミング学習へモブプログラミングを導入する際の学習環境や学習コンテンツにおける課題を抽出・整理するとともに，それらへの対処手法を提案する．また，リモート環境における本ロボットプログラミング学習の導入も検討する．},
+ pages = {645--646},
+ publisher = {情報処理学会},
+ title = {モブプログラミングによるロボットプログラミング学習の検討},
+ volume = {2022},
+ year = {2022},
+ abbr = {Domestic},
+  website= {https://ipsj.ixsq.nii.ac.jp/records/221778},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00220710,
+ author = {晋梧 伊藤 and 克弥 松原},
+ booktitle = {第84回全国大会講演論文集},
+ issue = {1},
+ month = {Feb},
+ abstract = {World Wide Webは，現状インターネット上で最も普及している情報システムである.膨大な量のWebコンテンツは現在も作成，更新され続けており，更新に伴い消失してしまうコンテンツも存在する．社会のICT化が進むことにより，より重要な情報が含まれる可能性が高まった Webページを収集，蓄積して，後世への知識の遺産として残すという取り組みは現代のデジタル社会における重要な使命の一つである.しかし，Webページを収集，蓄積を現状行なっているサービスは日々増え続ける世界中のWebページを収集できているというわけではない.これは，Webページを蓄積するストレージ容量の急激な増大によるシステム運用コストが大きな課題の一つとなっている．本研究では，Webアーカイブに必要なストレージの増大に対してP2P技術を用いたWebアーカイブ作成の機構を作成する．},
+ pages = {497--498},
+ publisher = {情報処理学会},
+ title = {ブラウザキャッシュを活用したP2P型Webアーカイブ機構の検討},
+ volume = {2022},
+ year = {2022},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/220710},
+}
+
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00216808,
+ author = {太斗 森川 and 克弥 松原},
+ issue = {52},
+ month = {Feb},
+ abstract = {実世界の様々な情報をセンシングするために導入される IoT デバイスは，管理者の目がとどきにくい設置場所や設置数に比例した管理コスト増大などが原因となり，情報漏えいや不正利用などの攻撃に晒されるリスクが高い．特に，近年の高機能・高性能化した IoT デバイスは，PC と同様に，O Sやライブラリなど多数のソフトウェアコンポーネントで構成されており，IoT デバイスの管理においても，脆弱性対策としてのソフトウェア更新管理が重要となっている．PC管理で広く活用されているネットワークブートは，サーバからネットワークを通じて配信されるソフトウェア環境を使って OS やアプリケーションを起動することで，起動性能とソフトウェア環境管理コストの両方を最適化できるプロビジョニング手法である．しかし，IoT デバイスのような膨大な数のデバイス群を対象としたネットワークブートでは，サーバやサーバにつながるネットワークがボトルネックとなって，起動性能が大幅に低下することがある．本研究では，広域に分散した IoT デバイス群を対象としたネットワークブートの最適化手法として，P2P 形式による分散協調ソフトウェア配信機構を検討する．},
+ title = {IoTデバイス群を対象としたP2P型ネットワークブート機構の検討},
+ year = {2022},
+ booktitle = {研究報告インターネットと運用技術（IOT）},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/216808},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00216794,
+ author = {友佳 林 and 克弥 松原 and 賢 鷲北 and 佑樹 坪内},
+ issue = {38},
+ month = {Feb},
+ abstract = {システムの可用性や拡張性を高める設計手法のひとつとして，マイクロサービスアーキテクチャが注目されている．一方で，モノリシック型のシステムと比較すると，システムが大規模かつ複雑になり，運用や監視に対する負荷や難易度が高まるという課題がある．著者らは，マイクロサービス型システムの障害対応において，コンポーネント間の依存関係を把握することが最も重要であると考える．本研究では，コンポーネント間依存関係の可視化を中心としたシステム監視ダッシュボードを提案する．監視対象コンポーネント数の増加に対処するために，Situation Awareness と認知心理学の理論から導出した要件にもとづいて UI を設計した．本稿では，設計した監視ダッシュボード UI による状況認識の精度や認知負荷への影響を評価するために，実務経験を有する監視エンジニアを被験者とした，マイクロサービス型システムの障害対応に関するシミュレーションの実施計画について示す．},
+ title = {マイクロサービス型システムの監視におけるダッシュボードUI設計に起因する状況認識への影響},
+ year = {2022},
+ booktitle = {研究報告インターネットと運用技術（IOT）},
+ abbr= {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/216794},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00217256,
+ author = {文人 菅 and 克弥 松原},
+ issue = {36},
+ month = {Mar},
+ abstract = {高性能なクラウドサーバ（以降，クラウド）とロボットが連携することで，より高度な制御・知能処理を実現するクラウドロボティクスでは，計算負荷，ネットワーク状況やハードウェア制約などを考慮して，クラウドとロボットへタスクを分散配置することがシステム実現の要となる．しかし，実世界で稼働するロボットは，周辺環境変化の影響を受けて変化するバッテリー残量やネットワーク状況などを高精度に予測することが難しいため，あらかじめ最適なタスク配置を静的に決めることが難しいという課題がある．このような状況変化に合わせて，クラウドとロボット間でタスクを動的に再配置することが望まれるが，クラウドとロボットの CPU アーキテクチャは異なる場合が多く，CPU のレジスタ構成や命令セットの違いにより，実行中のタスクを異種デバイス間で移行することは容易ではない．本研究では，クラウドロボティクスで動作する ROS ノードを対象とした異種デバイス間マイグレーション機構の実現手法を検討する．既存の ROS ノードプログラムを WebAssembly にコンパイルするための WebAssembly 用 ROS フレームワークを実装することで，クラウドとロボットの両方で動作する ROS ノードを実現する．さらに，WebAssembly 仮想マシンに仮想マシン実行状態の保存復元機構を実装することで，実行状態をともなった ROS ノードの動的マイグレーションを可能にする．},
+ title = {クラウドロボティクスにおける異種デバイス間タスクマイグレーション機構の検討},
+ year = {2022},
+ abbr= {Domestic},
+ booktitle = {研究報告組込みシステム（EMB）},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/217256},
 }
 
 @inproceedings{10.1145/3468737.3494092,
@@ -316,7 +503,101 @@
   numpages = {10},
   keywords = {traffic control, security, packet filtering and routing},
   location = {Leicester, United Kingdom},
-  abbr= {International Conf.}
+  abbr= {International Conf.},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00213892,
+ author = {友佳 林 and 克弥 松原 and 賢 鷲北 and 佑樹 坪内},
+ booktitle = {インターネットと運用技術シンポジウム論文集},
+ month = {Nov},
+ pages = {97--98},
+ publisher = {情報処理学会},
+ title = {Situation Awarenessと認知心理学にもとづいたマイクロサービス型システム向け監視ダッシュボードの設計},
+ volume = {2021},
+ year = {2021},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/213892},
+}
+
+@inproceedings{osc21, 
+  author = {裕貴 中田}, 
+  title = {SKBパケット選抜総選挙 〜 僕たちは誰について行けばいい？}, 
+  booktitle = {Open Source Conference 2021 Online Hokkaido}, 
+  year = {2021}, 
+  month = {Jun}, 
+  abbr2= {Oral},
+  website= {https://event.ospn.jp/osc2021-online-do},
+  slides = {https://speakerdeck.com/chikuwait/osc21do},
+  abbr= {Oral},
+}
+
+@techreport{oai:ipsj.ixsq.nii.ac.jp:00211350,
+ author = {克弥 松原 and 卓耶 雫石 and 雄人 倉茂, and 知寛 川谷 and 友佳 林},
+ issue = {2},
+ month = {May},
+ abstract = {多数の学生が集まる大学では，COVID-19 対策と日常の活動を両立させる「ニューノーマル」への対応が求められている．日常生活のなかで実践が求められている COVID-19 感染対策のひとつに，行動履歴の管理がある．COVID-19 感染が発覚した場合，保健所の聞き取りや大学等の所属先への報告において，行動履歴の情報提供を求められる．報告された行動履歴は，感染経路や接触者の特定につながる重要な情報源となる．また，所属先組織では，関係者への注意喚起や一時的な封鎖・消毒実施の対象となる構内区域を特定するために，報告された行動履歴を活用することも考えられる．本稿では，BLE ビーコンを用いた滞在履歴記録支援ツールの設計と開発について報告する．大学構内の空間特有の条件や制約，利用時のユーザ負担の少なさ，プライバシへの配慮などの要件とそれらを考慮したツールの機能設計，導入における課題，普及と活用への取り組みについてまとめる．},
+ title = {大学におけるCOVID-19対策としてのITを用いた行動履歴記録支援},
+ year = {2021},
+ abbr = {Domestic},
+ booktitle= {研究報告情報システムと社会環境（IS）},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/211350},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00214768,
+ author = {綾乃 吉川 and 克弥 松原},
+ booktitle = {第83回全国大会講演論文集},
+ issue = {1},
+ month = {Mar},
+ abstract = {ペンタブレット製品の普及等にともない，ペイントソフトウェアを使って描くデジタルイラストが注目されている．デジタルイラストの制作において，編集取消や再編集，再利用などを目的として，完成までの途中過程のデータをいくつも保存しておくことがあり，ストレージの容量を圧迫する課題がある．イラストデータはバイナリ形式であることや，ファイルの内部構造もペイントソフトウェアに依存することから，単一の圧縮形式を一様に適用するだけでは十分な効果が期待できない．本研究では，イラスト制作の各編集・加工に着目し，各編集・加工ごとに適切な圧縮方式を選択することで効果的にイラストデータを圧縮する機構を実現する．本提案機構は，ペイントソフトウェアに対して透過的に実現することで，既存のイラスト制作環境への影響を最小限にすることを目指す．},
+ pages = {321--322},
+ publisher = {情報処理学会},
+ title = {編集履歴にもとづいたイラストデータの透過的圧縮機構},
+ volume = {2021},
+ year = {2021},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/214768}
+}
+
+@inproceedings{weko_209511_1,
+  author	 = "七菜 宮越 and 友佳 林 and 裕貴 中田 and 克弥 松原",
+  title	 = "マイクロサービス型システムの監視におけるグラフDB採用によるメトリック問い合わせ最適化の検討",
+  booktitle = "研究報告インターネットと運用技術（IOT）",
+  year 	 = "2021",
+  institution	 = "公立はこだて未来大学, 公立はこだて未来大学, 公立はこだて未来大学, 公立はこだて未来大学",
+  number	 = "16",
+  month	 = "feb",
+  abstract = "システムの拡張性や可用性などを向上する設計手法のひとつとして，マイクロサービス・アーキテクチャが注目されている．一方，マイクロサービス型システムでは，負荷に応じたスケールアウトなどの対応により，コンポーネントの数やそれらの依存関係が動的に変化する．分散システムの障害が複数要因の組み合わせで起きる傾向とあいまって，これら依存関係の動的変化は，マイクロサービス型システムの監視における障害発生時の状態把握や障害原因の追究を難しくしている．著者らは，依存関係の動的変化をともなう分散システムを対象とした監視において，コンポーネント間の依存関係に着目しつつ，システムの状態を迅速に把握できる可視化手法を提案している．本研究は，マイクロサービス型システムの監視において収集されるメトリックを管理するデータベースとして，グラフ DB の採用を検討する．本稿では，依存関係に着目したシステム状態可視化にともなって発行されるメトリック問い合わせを分析することで，依存関係情報や各メトリックの保存と探索におけるグラフ DB の有用性を議論する．また，監視ツールの評価に用いるためのマイクロサービス型システムの監視テストベッドの構築についても紹介する．",
+  abbr = {Domestic},
+  website={https://ipsj.ixsq.nii.ac.jp/records/209511},
+}
+
+@INPROCEEDINGS{9382728,
+  author={Shizukuishi, Takuya and Matsubara, Katsuya},
+  booktitle={2021 IEEE/SICE International Symposium on System Integration (SII)}, 
+  title={Efficient Tailoring of Universal Software Components for Conserving Resources: Evaluation in Practical ROS-based System}, 
+  year={2021},
+  month={Jan},
+  volume={},
+  number={},
+  pages={431-436},
+  keywords={Linux;Memory management;Tools;Software;Acceleration;Kernel;Robots},
+  doi={10.1109/IEEECONF49454.2021.9382728},
+  abstract = {The method of development for robot systems is shifting toward rapid and efficient construction utilizing universal software components, such as various common libraries and operating systems, with tailored implementations rather than programming from scratch. The Robot Operating System (ROS), which is becoming widely used as a robotics infrastructure, is built on the Linux operating system, which has been commonly used in PC and server environments. However, many universal software components may contain functionalities and implementation codes that are unnecessary in certain cases, and these may have negative impacts, especially on resource-constrained platforms. Unfortunately, identifying and eliminating unnecessary code appropriately is a difficult process because it requires a deep understanding of the system behavior and implementation details of the component.This study proposes a dynamic analysis method and tools to help determine the necessity of each functionality of the Linux kernel, one of the largest universal software components in a ROS-based system, on the basis of energy and memory consumption. To evaluate the practicality of the proposal, we conduct an experimental application in a practical ROS-based robot system. The results show that even without understanding the details of the whole kernel, memory consumption can be reduced by about 40% by efficiently disabling unnecessary features.},
+  abbr= {International Conf.},
+  }
+
+@article{松原 克弥2020,
+  title={汎用OSを用いたメモリ診断ツールの実現とワーキングメモリの効率的な削減手法},
+  author={克弥 松原 and 卓耶 雫石 and 康一  飯泉},
+  journal={コンピュータ ソフトウェア},
+  volume={37},
+  number={2},
+  pages={2_46-2_58},
+  year={2020},
+  month = {May},
+  doi={10.11309/jssst.37.2_46},
+  abbr = {Journal},
+  abstract = {様々なモノのスマート化やIoT化にともなって，組み込み機器の高機能化が進んでいる．それにともなって，組み込み機器に搭載されるDRAMは，数年前のサーバやPCと同程度まで大容量化・高密度化している．機器の出荷前やメンテナンス時におけるメモリ不良の検出には，軽量で自己起動可能なスタンドアローン型メモリ診断ツールの利用が有効である．著者らは，マルチプラットフォームへの対応やメモリと他デバイスを総合的に診断する統合ツールの実現を目的として，汎用OSを用いてメモリ診断ツールを実現した．メモリ診断ツールによるメモリ不良検出では，ツール自体の実行に必要なワーキングメモリに対して十分なテストを実施することが難しいという課題がある．特に，汎用OSを用いてメモリ診断ツールを実現する場合，ワーキングメモリの増大化がメモリ診断能力に影響を与える．本論文では，汎用OSに含まれる各カーネル機能の利用頻度とメモリ消費量に着目し，ワーキングメモリを効率的に削減するためのTinification手法の提案とメモリ診断ツールへの適用結果について示す．ARMプラットフォームを対象とした実験では，デフォルトのLinuxカーネルに対して23.6%のワーキングメモリ削減効果を確認できた．}
 }
 
 @article{jsise2020,
@@ -327,6 +608,7 @@
   number={2},
   pages={155-160},
   year={2020},
+  month = {Apr},
   doi={10.14926/jsise.37.155},
   abbr = {Journal}
 }
@@ -348,6 +630,7 @@
   location = {Brno, Czech Republic},
   series = {SAC '20},
   abbr= {International Conf.},
+  month = {Mar},
 }
 
 @inproceedings{weko_208087_1,
@@ -362,6 +645,7 @@
   abstract = "マルチテナント方式のクラウドサービス基盤では，各テナントが平等にリソースを使用できる公平性，テナント間分離による性能低下を抑えたインスタンス性能，既存アプリケーションを改変せずに実行可能とする利便性の3つのサービス品質に十分な配慮を行う必要がある．近年注目されているコンテナ型仮想化技術によるクラウドサービス基盤では，複数のテナントそれぞれに対して，1つのプラットフォーム上で動作するプロセス単位で分離したインスタンスを提供する．その際に広く用いられているOSによるネットワークインタフェースの多重化方式は，パケット送受信の際に多くのOS機能を経由することでネットワークI/O性能が低下する課題がある．この課題に対して，OSカーネルのバイパスなどの高速にパケット処理を行うパケット送受信経路の最適化技術や，軽量なOS機能の実装などのOS処理に対する最適化技術がある．しかし，これらの手法は，トラフィックの公平性，ネットワークI/O性能，利便性のサービス品質すべてを最適にすることが難しい．本研究では，各テナントに割り当てたプロセスのそれぞれに対して，ハードウェア仮想化技術を用いた軽量ハイパーバイザにより実現する仮想ネットワークインタフェースを提供し，ネットワークI/O性能と利便性を最大限維持しつつ，それら仮想ネットワークインタフェースへのトラフィック制御によりテナント間の公平性を実現する手法を提案する．本手法は，コンテナ型仮想化技術向けのネットワーク機能においてハードウェア仮想化技術を併用することで，OSカーネルのバイパスなどを使用した際のトラフィック制御，複数のOS機能間経由にともなう冗長処理削減による性能低下抑制，既存OS向けアプリケーションをそのまま利用できる利便性を両立できる．",
   award={最優秀若手発表賞、2021年度コンピュータサイエンス領域奨励賞（システムソフトウェアとオペレーティング・システム研究会推薦）},
   abbr = {Domestic},
+  website={https://ipsj.ixsq.nii.ac.jp/records/208087},
 }
 
 @inproceedings{weko_208232_1,
@@ -374,7 +658,8 @@
   pages	 = "119--120",
   month	 = "nov",
   abbr= {Domestic},
-  award={優秀ポスター賞}
+  award={優秀ポスター賞},
+  website={https://ipsj.ixsq.nii.ac.jp/records/208232},
 }
 
 @INPROCEEDINGS{9202504,
@@ -388,7 +673,8 @@
   keywords={Linux;Switches;Web servers;Benchmark testing;Kernel;High availability, HTTP 502/503/504 server errors, C10K problem, process migration, heterogeneous operating systems},
   doi={10.1109/COMPSAC48688.2020.00-97},
   abstract = {Web services have seen early adoption and rapid growth with the introduction of various web system frameworks, and not only large companies but also smaller businesses or individuals can provide their own web services offering access to their products, entertainment, and information. Therefore, as the number of Internet users increases, especially with the spread of smartphones, even relatively small web service infrastructure need to have both high access performance and availability, although the cost of additional computational resources and redundant servers may be hard to bear depending on the load. We focus on the fact that the performance characteristics may differ depending on the internal implementation of the operating system (OS), even when the available computing resources are the same. This paper investigates the possibility of developing a system that achieves both high access performance and availability of the web server by dynamically switching the OS on which the web server is running, without requiring additional computing resources or using redundant servers. This paper identifies the differences between Linux and FreeBSD in terms of network processing and describes the mechanism of process migration among heterogeneous OSes to switch the OSes. It then demonstrates the feasibility of our approach with experimental results on the performance characteristics and load tolerance of a web server in operation when the OSes are dynamically switched.},
-  abbr= {International Conf.}
+  abbr= {International Conf.},
+  month = {Jul},
 }
 
 @inproceedings{osc20, 
@@ -402,6 +688,45 @@
   slides = {https://speakerdeck.com/chikuwait/learn-ebpf}
 }
 
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00205728,
+  author = {賢登 山口 and 克弥 松原},
+  booktitle = {第82回全国大会講演論文集},
+  issue = {1},
+  month = {Feb},
+  abstract = {マーカーレスARは現実世界を認識し，自由にARオブジェクトを置くことができ，多くのARコンテンツで用いられている．モバイル端末を用いたマーカーレスARは，端末の動きをその加速度によって特定することで，ARオブジェクトの位置を調整している．しかし，ユーザが移動空間内にいる場合，端末で取得できる加速度に空間の加速度が加わってしまうため，空間内に置いたARオブジェクトの位置が調整できない．本研究では，移動空間内に加速度センサを設置し，取得した空間の加速度をモバイル端末へ送信し，モバイル端末のOS内で端末が取得した加速度から，その値を減算することで，ARオブジェクトの位置調整を可能にする．本稿では，Android端末を対象として，空間加速度の受信方法と，端末の加速度値の減算手法について述べる．},
+  pages = {151--152},
+  publisher = {情報処理学会},
+  title = {移動空間内での使用を想定したモバイル向けマーカーレスAR実現手法の検討},
+  volume = {2020},
+  year = {2020},
+  abbr = {Domestic},
+  website= {https://ipsj.ixsq.nii.ac.jp/records/205728},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00203513,
+ author = {友佳 林 and 蓮 伊勢田 and 克弥 松原 and 賢 鷲北 and 佑樹 坪内 and 亮介 松本},
+ issue = {22},
+ month = {Feb},
+ abstract = {Web サービスの高機能化やニーズの多様化にともなって，Web サービスを構成するシステムが集中型から分散型に移行している．今後，IoT との連携により，システムの大規模化や超分散化が進むことが予測される．筆者らは，サービスへの負荷や要求などの状況に応じて，計算機資源の割当や配置を動的かつ柔軟に変更できるシステム基盤の実現を目指している．そのようなシステムでは，各コンポーネントの状態や依存関係を迅速に把握することが困難になる．そのため，障害発生時の原因追求や対処に時間を要してしまうという課題が起こりつつある．本研究は，動的に構成が変化する超分散システムを対象にした，システム監視ツールを実現する．本稿では，動的に変化するコンポーネントの位置や依存関係を迅速に把握するための可視化手法について検討する．},
+ title = {動的適応性を持つ分散システムを対象としたシステム状態可視化手法の検討},
+ year = {2020},
+ booktitle = {研究報告インターネットと運用技術（IOT）},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/203513},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00203342,
+ author = {克弥 松原 and 雄平 髙川},
+ issue = {10},
+ month = {Feb},
+ abstract = {インターネット利用者数の増大に合わせて，比較的小規模な Web サービス基盤に対してもアクセス性能と可用性の両立が求められている．一方，個人などが構築する小規模な Web サービス基盤では，負荷に合わせた計算資源の追加投入や冗長サーバ構成にかかるコストを負担することが難しい場合がある．本研究では，利用できる計算資源が同じ場合でも，動作する OS の内部実装の違いによって性能特性が異なる場合があることに着目する．Web サーバが動作する OS を動的に切り替えることで，計算資源の追加投入や冗長サーバを用いずに，Web サーバのアクセス性能と可用性を両立するシステムの実現を目指す．本稿では，Linux と FreeBSD を対象とした異種 OS 間プロセスマイグレーションの実現手法について述べ，OS を動的に切り替えた際の動作中 Web サーバの性能特性と負荷耐性の変化を実験結果により示す．},
+ title = {サービス可用性を改善するための異種OS間プロセスマイグレーションの活用},
+ year = {2020},
+ booktitle = {研究報告システムソフトウェアとオペレーティング・システム（OS）},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/203342},
+}
+
 @inproceedings{weko_203344_1,
   author	 = "裕貴 中田 and 克弥 松原 and 亮介 松本",
   title	 = "マルチテナント向けコンテナ環境における軽量かつ柔軟なARPスプーフィング対策の実現",
@@ -413,6 +738,7 @@
   month	 = "feb",
   abstract = "近年，コンテナ型仮想化技術を用いて，マルチテナント向けクラウドコンピューティング基盤を実現する事例が増えている．コンテナ型仮想化システムでは，OS カーネルを共有しつつ，プロセス単位で OS リソースを多重化することで，各コンテナ環境を隔離する．しかし，隔離空間から抜けて，他コンテナに対しての攻撃が可能な OS リソースや機能が存在する．これらの利用は実行権限によって制限されているが，粒度が不十分である．従来，これらの OS リソースの制限をおこなうために，コンテナのセキュリティ機能を用いた制御，仮想マシンを用いた OS 多重化による隔離，ユーザランドにおけるネットワークスタックの再構築などの手法が提案されている．しかし，これらの手法は，設定が柔軟でなかったり，ネットワークのオーバヘッドを増大させる課題があった．本研究では，ハードウェア仮想化技術を用いつつ，OS を多重化せずに軽量かつ柔軟なネットワーク隔離手法を提案する．",
   abbr = {Domestic},
+  website={https://ipsj.ixsq.nii.ac.jp/records/203344},
 }
 
 @article{1520853833389679360,
@@ -425,8 +751,47 @@
   volume="33",
   number="7",
   pages="83-90",
-  URL="https://cir.nii.ac.jp/crid/1520853833389679360",
+  website="https://cir.nii.ac.jp/crid/1520853833389679360",
   abbr= {Domestic},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00194511,
+ author = {雄平 高川 and 克弥 松原},
+ booktitle = {研究報告システムソフトウェアとオペレーティング・システム（OS）},
+ issue = {13},
+ month = {Feb},
+ abstract = {Linux において確立されたコンテナ型仮想化技術は，Docker の登場と普及にともなって，標準化団体 Open Container Intiative (OCI) 主導でコンテナ仕様が定義され，現在では，Windows や macOS などの他の OS 環境でもコンテナを利用できるようになった．FreeBSD 環境で動作する Docker では，FreeBSD が持つ Linux バイナリ互換機能などを活用してコンテナを実現している．しかし，FreeBSD 上の既存コンテナ実装は，プロセスのアイソレーション機能やマイグレーション機能など，OCI コンテナ仕様と比較して，その実現が十分とはいえない箇所が存在する．本研究では，FreeBSD 上で OCI 仕様に準拠するコンテナを実装し，さらに，そのコンテナのマイグレーションを実現する手法について提案する．},
+ title = {FreeBSDにおけるLinux互換コンテナを対象としたマイグレーション機構の実現},
+ year = {2019},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/194511},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00196176,
+ author = {錬 森田 and 克弥 松原 and 昭二 鈴木},
+ booktitle = {第81回全国大会講演論文集},
+ issue = {1},
+ month = {Feb},
+ abstract = {ロボットやドローンなどのシステム開発基盤として，ROSの採用が進んでいる．ROSでは，複数ノードのグラフ構造によるプログラミングモデルを採用しており，ノード間通信の実装がシステム性能に与える影響が大きい．ROSの次世代版として開発が進んでいるROS2では，システムの目的に合わせてノード間通信機能の実装を選択できる機構を持つ．しかし，通信先ノードを明示的に指定しないPub/Sub通信モデルを基とするROS2通信機構は，複数マシン間のノードによるネットワーク通信に最適化された実装が多い．本稿では，ROS2システムにおける同一マシン内のノード間通信を最適化することを目的として，最近のLinuxにおいて利用可能なIPCフレームワークの比較評価を行う．},
+ pages = {131--132},
+ publisher = {情報処理学会},
+ title = {ROS2通信機構の最適化に向けたIPCフレームワークの比較評価},
+ volume = {2019},
+ year = {2019},
+ abbr = {Domestic},
+ website = {https://ipsj.ixsq.nii.ac.jp/records/196176},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00194840,
+ author = {健太 深谷 and 克弥 松原},
+ issue = {31},
+ month = {Feb},
+ abstract = {ネットブート型シンクライアントは，GPU など端末の計算資源を有効活用しつつ，セキュリティ対策や TCO 削減を実現する手段のひとつとして，大学など大規模組織を中心に広く導入されている．一方，ネットブートにともなう起動時間の増加やレスポンス低下の課題を解決する必要があり，ピーク負荷に合わせた冗長サーバの導入や端末にディスクを搭載してディスクイメージをキャッシュするなどの対策が用いられている．しかし，これらの対策がセキュリティ対策や TCO 削減効果に影響を及ぼしている．本研究では，ほとんどの既存 OS が有するディスクキャッシュ機構に着目し，端末からサーバへのディスクイメージ ・ データの要求に対して，他の端末の RAM 上にある OS キャッシュを用いてこれに応答することで，ブートサーバの負荷を分散する手法を提案する．サーバよりも近隣の端末がメモリ上のデータを使って応答することで，サーバに対する負荷軽減だけでなく，ディスクアクセスに対する RTT の削減効果も期待できる．本稿では，Linux を対象として，カーネルのページキャッシュ機構に統合した AoE サーバ機能の実現について述べる．},
+ title = {ネットブート型シンクライアント群環境におけるOSキャッシュを活用するサーバ負荷分散手法},
+ year = {2019},
+ abbr = {Domestic},
+ booktitle = {研究報告インターネットと運用技術（IOT）},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/194840},
 }
 
 @INPROCEEDINGS{9006661,
@@ -440,7 +805,48 @@
   keywords={Machine learning;Androids;Humanoid robots;Access control;Artificial neural networks;Runtime;Data models;machine learning inference;Android;smart-phone;access control},
   doi={10.23919/ICMU48249.2019.9006661},
   abstract = {Utilizing machine learning inference in mobile platforms have been made realistic since recent smartphones may have high-performance processors and hardware accelerators of signal and image processing. However, it could bring issues. One of the most significant issues is that any machine learning inferences can be unlimitedly applied to personal data which once the application got permitted to. Furthermore, it could be quite hard to understand the behavior of a `pre-trained' machine learning model and the behavior of an installed application can be transparently modified afterword by replacing a used model. This research aims to implement access control against such functionalities of machine learning inference for mobile platforms. In this paper, we describe how to verify used pre-trained models and how to implement permission control at Android Neural Networks API for Android as a target platform. And we also show an evaluation result with a prototype implementation.},
-  abbr= {International Conf.}
+  abbr= {International Conf.},
+  month = {Nov},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00194856,
+ author = {陽太 永井 and 克弥 松原},
+ booktitle = {研究報告インターネットと運用技術（IOT）},
+ issue = {47},
+ month = {Feb},
+ abstract = {筆者らは，教室 PC の余剰計算資源を活用するコンテナ型クラウドシステムの実現を目指している．本システムでは，授業での利用やクラウド管理者の意図しないシャットダウンによって，利用できる計算資源が動的かつ頻繁に変化することが想定される．この課題に対しては，実行中のコンテナを動的にマイグレーションすることによって再配置を行うことが有効である．しかし，任意ノードへの再配置を想定した既存コンテナマイグレーション機構は，インスタンス状態の保存や転送にかかるオーバヘッドが大きい．本研究では，コンテナマイグレーションの際，遷移元ノードにチェックポイント状態を一定期間保持しておき，再び再配置が必要となった際の遷移先ノードとして優先的にそのノードを選択し，さらに，過去のチェックポイントとの差分のみを抽出して転送することでネットワーク転送量を削減する 「残身型コンテナマイグレーション機構」 を提案する．本稿では，OCI 標準コンテナランタイムである runC を対象として，提案する残身型コンテナマイグレーション機構の実現手法について述べる．},
+ title = {高頻度な再配置を想定したコンテナマイグレーション機構の実現},
+ year = {2019},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/194856},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00200879,
+ author = {健太 深谷 and 克弥 松原},
+ booktitle = {コンピュータシステム・シンポジウム論文集},
+ month = {Dec},
+ abstract = {ネットブート型シンクライアントは，各端末の計算資源を有効活用しつつ，導入から運用までの総合コスト（TCO）を削減できるソリューションとして，企業や教育機関，施設等の大規模 PC 環境で広く採用されている．一方，各端末のディスクイメージをサーバに集約して起動時にネットワーク配信するため，サーバやその経路ネットワークへの負荷集中が課題となる．サーバ冗長化や端末のローカルディスクへのキャッシュなどの既存対処手法では，新たな設備の導入を要するため，TCO 削減との両立が難しい．本研究では，端末上で起動した OS が持つキャッシュに着目し，各端末のメモリ上にキャッシュされているディスクデータ片を必要とする近隣の他端末へ配信することで，サーバに対する負荷の削減を目指す．さらに，各端末の動作状況に応じて変化する OS キャッシュの効率的な分散管理を実現するために，ネットブートのディスクデータ要求毎に P2P 型のキャッシュ探索を行い最適なデータ保有端末を特定する機構を実現する．本稿では，Linux カーネルのページキャッシュ機構を対象として，P2P 型キャッシュ管理とディスクイメージ・サーバ機能を実現した p3cache の実装について述べる．また，複数台のシンクライアント端末群を用いた実験評価についても示す．},
+ pages = {15--22},
+ publisher = {情報処理学会},
+ title = {p3cache：ネットブート型シンクライアント端末群を対象としたP2P型OSキャッシュ共有機構},
+ volume = {2019},
+ year = {2019},
+ abbr = {Domestic},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/200879}
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00192405,
+ author = {卓耶 雫石 and 克弥 松原},
+ booktitle = {コンピュータシステム・シンポジウム論文集},
+ month = {Nov},
+ abstract = {IoT やエッジコンピューティングなどが注目されるにともなって，組み込み機器が高機能化している．これらの組み込み機器において，ネットワークスタックなどの豊富なソフトウェア資産をもつ Linux の活用が拡がっている．一方，Linux は，バージョンアップにともなって肥大化しており，そのメモリ使用量が組み込み機器への導入の障害となっている．Linux Kernel Config の仕組みは，メモリ使用量削減のために使用しない機能を無効化できるが，その設定項目が複雑なため，システムの目的ごとに必要十分な設定を見つけることが難しい．本研究では，Linux カーネルのソースコードからカーネル内の各関数と Linux Kernel Config 項目との対応関係を機械的に抽出し，アプリケーションの動作中にカーネル内関数の呼び出し状況とメモリ使用量を観測することで，アプリケーション実行に影響を与えず，かつ，メモリ使用量削減効果の高い Linux Kernel Config 項目を特定する．piCore ディストリビューション上で Web サーバが動作するシステムへ本手法を適用した結果，Linux Kernel Config の変更により約 6.5 MB のメモリ使用量を削減できた},
+ pages = {81--89},
+ publisher = {情報処理学会},
+ title = {カーネル利用状況とメモリ使用量に着目したLinux Kernel Configの解析手法},
+ volume = {2018},
+ year = {2018},
+ abbr = {Domestic},
+ website = {https://ipsj.ixsq.nii.ac.jp/records/192405},
 }
 
 @INPROCEEDINGS{8607261,
@@ -455,9 +861,44 @@
   keywords={Robots;Quality of service;Loading;Reliability;Conferences;Operating systems;Publish-subscribe;Robot Operating System;ROS2;Data Distribution Service;Publish-Subscribe Messaging},
   doi={10.1109/RTCSA.2018.00043},
   abstract = {ROS2 (Robot Operating System 2.0) has been being developed from scratch in order to support new applications. One of the most significant change in ROS2 is to follow the DDS standard specification as an interface of the inter-module communication. Currently some of companies and OSS communities provide DDS implementations which have different characteristics such as using the shared memory. The current implementation of ROS2 allows to specify only one DDS implementation to be used in a system through application code or the environment variable at running, nevertheless each communication may have different characteristics and each DDS implementation may be optimized for different communication types. This research proposes a mechanism to allow multiple DDS implementations existing in a system and to dynamically bind one into each communication. The proposed mechanism can estimate communication area, maximum data size, requirement of the QoS control, for each communication channel and then it can select a proper DDS implementation. We clarify that the current available DDS implementations have different characteristics, and then describe implementation of the DDS dynamic binder mechanism.},
-  abbr= {International Conf.}
+  abbr= {International Conf.},
 }
 
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00186243,
+ author = {陽太 永井 and 克弥 松原 },
+ issue = {5},
+ month = {Feb},
+ abstract = {情報系大学では，演習活動の高度化に伴って，学生 1 人に対して複数台のマシンが提供できるクラウドコンピューティング環境の要求が高まっている．しかし，設定される演習課題には，学内向けサービスとの連携を想定するものもあり，商用のパブリック ・ クラウドでは対応が困難な場合もある．一方で，大規模計算機管理を担う機関を持たない小規模大学では，多大な初期費用と管理コストを必要とするオンプレミス ・ クラウド導入に対する敷居が高い．本研究では，BYOD の普及による教室 PC の稼働率低下に着目し，教室 PC の余剰資源を活用した学内向けオープンクラウドの実現を目指している．教室 PC を活用したクラウド基盤では，授業利用や電源断により，クラウドに利用可能な計算資源が動的に増減する．本稿では，効率的なライブマイグレーション機構を実現することにより，積極的なインタンス再配置による計算資源の動的な増減に対応する手法を提案する．},
+ title = {学内向けオープンクラウドにおける計算資源の動的な増減への対応手法に関する検討},
+ year = {2018},
+ abbr = {Domestic},
+ booktitle = {研究報告インターネットと運用技術（IOT）},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/186243},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00186281,
+ author = {健太 深谷 and 克弥 松原},
+ issue = {43},
+ month = {Feb},
+ abstract = {計算機環境の構築自動化や運用管理の効率化を目的として，ネットワークブートを用いた OS プロビジョニングが広く用いられている．また，複数サーバによる負荷分散やクライアント端末でのキャッシュなど，ネットワークブートによる起動時間増加やレスポンス低下の課題を解決する最適化手法も実用的になっている．本研究では, サーバやクライアント端末が接続されるネットワーク自体がネットワークブートを最適化する in-network キャッシュの実現を目指している．サーバやクライアント端末等における最適化手法と比べて，in-network キャッシュによるネットブートの最適化手法は，シンクライアント端末や様々な OS への対応が容易，ネットワークトポロジーに応じた自然な負荷分散を実現，PC 教室や事務局等の接続ネットワーク毎の状況に応じた最適化が可能という特徴がある．本稿では，AoE プロトコルによるネットブートを対象として，SDN / NFV 技術を用いた in-network キャッシュ機構の実現方式とネットブートに特化した分散キャッシュアルゴリズムの検討について述べる．},
+ title = {ネットワークブートに特化したSDN/NFVキャッシング機構の実現に関する検討},
+ year = {2018},
+ abbr = {Domestic},
+ booktitle = {研究報告インターネットと運用技術（IOT）},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/186281},
+}
+
+@inproceedings{oai:ipsj.ixsq.nii.ac.jp:00186424,
+ author = {錬 森田 and 克弥 松原},
+ issue = {2},
+ month = {Feb},
+ abstract = {適用範囲の拡大にともなって開発されている ROS2 (Robot Operating System 2.0) は，通信基盤に DDS (Data Distribution Service) 仕様を採用し，システムの目的に応じて DDS 実装を選択できる．現在，複数のベンダが DDS 実装を提供しており，共有メモリ使用の有無など DDS 実装毎に特徴が異なる．現在の ROS2 では，システム毎に一つの DDS 実装しか指定できないため，特徴の異なる通信毎に最適な DDS 実装へ切り替えることができない．本研究では，ROS2 におけるモジュール間通信の性能向上を目的とし，通信特性に応じた DDS 実装の動的選択機構を提案する．本提案機構は，通信開始時にデータサイズや通信範囲などの通信特性を推定し，最適な DDS 実装を自動的に選択する．本稿では，通信性能とオーバーヘッドの観点で現 ROS2 実装との比較評価を行い，DDS 実装を動的に選択することの有意性を示す.},
+ title = {ROS2における通信特性に応じたDDS実装の動的選択機構の実現},
+ year = {2018},
+ abbr = {Domestic},
+ booktitle= {研究報告組込みシステム（EMB）},
+ website= {https://ipsj.ixsq.nii.ac.jp/records/186424},
+}
 
 @inproceedings{bitvisor17, 
   author = {裕貴 中田 and 克弥 松原}, 
