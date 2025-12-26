@@ -1,10 +1,11 @@
 ---
+page_id: project_1
 layout: page
-title: project 7
+title: project 1
 description: with background image
-img: assets/img/4.jpg
+img: assets/img/12.jpg
 importance: 1
-category: work
+category: WIP
 related_publications: true
 ---
 

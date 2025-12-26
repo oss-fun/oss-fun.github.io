@@ -1,11 +1,11 @@
 ---
+page_id: project_4
 layout: page
-title: project 8
-description: an other project with a background image and giscus comments
-img: assets/img/9.jpg
-importance: 2
-category: work
-giscus_comments: true
+title: project 4
+description: another without an image
+img:
+importance: 3
+category: Finished
 ---
 
 Every project has a beautiful feature showcase page.

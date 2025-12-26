@@ -18,8 +18,8 @@ bibliography:
 blog:
   navigation_title: blog
 categories:
-  fun: fun
-  work: work
+  WIP: 研究中
+  Finished: 研究終了
 citation:
   bibtex: "or as a BibTeX entry:"
   introduction: "If you found this useful, please cite this as:"
