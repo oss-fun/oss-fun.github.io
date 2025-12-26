@@ -3,11 +3,16 @@ page_id: teaching
 layout: page
 permalink: /teaching/
 title: 授業
-description: Materials for courses you taught. Replace this text with your description.
+description: 以下の授業を担当しています。
 nav: true
 nav_order: 6
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+# 学部
+- オペレーティングシステム（情報デザイン・知能システムコース）
+- システムプログラミング（高度ICT・情報システムコース）
+- 並列分散処理（高度ICT・情報システムコース）
+- ITアーキテクチャ概論（高度ICTコース）
 
-Organize your courses by years, topics, or universities, however you like!
+# 大学院
+- ITアーキテクチャ特論（高度ICT領域）
