@@ -71,7 +71,18 @@
   website= {https://2025.eurobsdcon.org/},
   abstract = {While Linux containers benefit from a rich ecosystem of Container Network Interface (CNI) plugins such as Calico and Cilium, FreeBSD Jails have lacked native, standardized solutions for advanced networking. As a result, users have relied on manual, error-prone configurations, which limit scalability and integration with modern orchestration platforms. This presentation introduces porting Calico, a widely adopted CNI plugin, to the FreeBSD operating system. Our approach replaced Linux-specific components with FreeBSD-native equivalents: iptables with ipfw, netlink sockets with routing sockets, and Linux network namespaces with FreeBSD’s vnet. This work aims to bridge the gap between Linux and BSD container networking. By providing scalable, policy-driven capabilities that are compatible with existing Linux-centric infrastructure, FreeBSD will be empowered to participate more fully in the broader container networking ecosystem.}
 }
-
+@inproceedings{jsss42,
+  author = {大悟 藤井 and 克弥 松原 and 裕貴 中田},
+  title = {WebAssemblyインタプリタを対象としたランタイム実装中立なチェックポイント・レストア機構},
+  year = {2025},
+  url = {https://jssst.or.jp/files/user/taikai/2025/papers/2c-4-R.pdf},
+  month	 = "Sep",
+  booktitle = {日本ソフトウェア科学会第42回大会},
+  publisher = {日本ソフトウェア科学会},
+  website= {https://jssst2025.wordpress.com/},
+  abbr = {Domestic},
+  abstract = {VMやコンテナなどの従来の仮想化技術において，チェックポイント・レストア (C/R) はアプリケーションの可搬性や可用性を高めるための基盤技術である．プラットフォーム中立性や安全性を持つ新たな仮想化技術WebAssembly(Wasm) においても，その重要性は同様である．Wasmは，特性の異なる多様なランタイム実装が存在するため，Wasmの活用には，これらを相互運用可能にする異種ランタイム間の C/R の実現が重要である．しかし，各ランタイムの内部実装は非互換であり，その実現方法は確立されていない．本研究は，この課題を解決するため，特定のランタイムに依存しない中立な方式による異種Wasmランタイム間の C/R 実現を目指す．そのために，6種類のWasmインタプリタ実装を対象とし，実行状態や最適化手法における実装差異を分析・体系化した上で，それらを相互に変換する機構の実現手法を述べる．},
+}
 @inproceedings{japan_community_day_2025,
   author = {Nakata, Yuki and Fujii, Daigo},
   title = {Beyond Portability: Live Migration for Evolving WebAssembly Workloads},
@@ -741,6 +752,29 @@
   website={https://ipsj.ixsq.nii.ac.jp/records/203344},
 }
 
+@article{published_papers/27898304,
+  title = {A Prototyping of Sustainable Cloud on Scattered Surplus Computing Resources},
+  author = {Yota Nagai and Katsuya Matsubara},
+  journal = {Proceedings of Workshop on Internet Architecture and Applications 2019 (IEICE Technical Report)},
+  month = {11},
+  number = {291},
+  pages = {73--78},
+  volume = {119},
+  year = {2019},
+  abbr = {International Conf.},
+  website = {https://ken.ieice.org/ken/paper/20191115c1rt/eng/},
+}
+@article{published_papers/27898134,
+  title = {Yet Another Container Migration on FreeBSD},
+  author = {Yuhei Takagawa and Katsuya Matsubara},
+  journal = {AsiaBSDCon 2019 Proceedings},
+  month = {3},
+  pages = {97--101},
+  doi = {10.25263/asiabsdcon2019/p07a},
+  year = {2019},
+  abbr = {International Conf.},
+  abstract = {The container-based virtualization, that multiplexes and isolates computing resource and name space which operating system (OS) provides for each process group of application, has been recently attracted. We focus on container migration among machines since it is one of the most important technology for realizing load balancing and increasing availability in cloud computing, that is a major application of the virtualization. Although FreeBSD VPS has already implemented one kind of migratable containers in FreeBSD, it is not enough in terms of resource limitation, compared to Linux one. This paper shows a novel implementation that how resource limitation and isolation close to that of Linux can be realized for FreeBSD containers. We also explain how processes, which could have sessions of file open and network connection, running in a FreeBSD container can be checkpointed and then they can be restored in another container. This implementation bases on runC which is one of standard container runtime and CRIU which is a major process migration tool in Linux.},
+}
 @article{1520853833389679360,
   author={裕貴 中田 and 克弥 松原},
   title="BLEビーコンを活用した地域課題解決型PBLの実践",
