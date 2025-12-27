@@ -1,5 +1,5 @@
 # 指導教員
-----
+
 <img width="200" src="../assets/img/profile/katsuya-matsubara.jpg">
 ## 松原 克弥 教授
  博士（工学）
