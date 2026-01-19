@@ -21,6 +21,22 @@
   selected= true,
 }
 
+@INPROCEEDINGS{cander-yuzuki,
+  author={Matsubara, Katsuya and Saito, Yuzuki and Fujii, Daigo and Nakata, Yuki},
+  booktitle={2025 Thirteenth International Symposium on Computing and Networking Workshops (CANDARW)}, 
+  title={Seamless Self-Healing in WebAssembly Container Orchestration with Runtime-Neutral Checkpointing}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={29-35},
+  keywords={Checkpointing;Cloud computing;Runtime;Switches;Containers;Webassembly;Prediction algorithms;Monitoring;Resilience;Edge computing;Dependable System;Fault Tolerance;Cloud Computing;Edge Computing;Live Migration;Kubernetes},
+  doi={10.1109/CANDARW68385.2025.00013},
+  abbr = {International Conf.},
+  selected= true,
+  abstract= {Modern cloud-native systems increasingly rely on WebAssembly (Wasm) containers for their lightweight nature and fast startup times. However, ensuring high availability in the face of inevitable failures remains a critical challenge. Traditional selfhealing mechanisms, often based on simple container restarts, cause service disruption and performance degradation. This paper presents a novel approach to achieve seamless self-healing in Wasm container orchestration by leveraging a runtime-neutral checkpointing framework. This framework, developed in our prior work, captures an application’s complete execution state independent of any specific runtime implementation. Building on this foundation, we demonstrate how this capability enables two key functions: hot restart and dynamic runtime switching. Hot restart allows a failed container to be restored from a checkpoint in milliseconds, eliminating the overhead of a cold startup. More importantly, we introduce a new paradigm for memory pressure alleviation without Pod eviction. By utilizing our runtime-neutral checkpoints, the orchestration system can gracefully switch a running application from a high-performance runtime (e.g., WasmEdge) to a more memory-efficient one (e.g., WAMR) when resources are constrained. Our empirical evaluation confirms that this approach effectively alleviates memory pressure while causing only a minimal, short-lived performance impact, proving to be a superior alternative to disruptive evictionbased methods.}
+}
+
+
 @inproceedings{oai:ipsj.ixsq.nii.ac.jp:02005946,
  author	 = "優月 齊藤 and 大悟 藤井 and 克弥 松原 and 裕貴 中田",
  booktitle = {コンピュータシステム・シンポジウム論文集},
@@ -349,7 +365,6 @@
   doi={10.11309/jssst.39.1_18},
   abbr = {Journal},
   abstract = {コンピュータ技術進歩の過程において，基盤ソフトウェアであるオペレーティングシステム(OS)の研究開発が盛んに行われ，数多くのOS実装が利用可能となった．デスクトップPCやスマートフォン，エンタープライズサーバなどの一部のプラットフォーム向けでは，WindowsやLinuxなどの少数のOSが寡占状態にあるが，すべてのシステムにおいて特定のOSが独占して採用されることはなく，現在でも，システムの目的や用途，プラットフォームの特性などに応じて複数のOSを使い分けている．著者らは，特性の異なる複数のOSを状況の変化に応じて動的に切り替えることで，OS上で稼働するサービスの負荷耐性や性能の改善を試みる手法を提案している．本論文では，LinuxとFreeBSDを対象として，サービス稼働中にそのシステム基盤であるOSの動的な切り替えを可能とすることを目的として，FreeBSDにおけるLinux互換プロセスのマイグレーション機構の実現手法についてまとめる．Linuxにおけるプロセスマイグレーション機構の標準ツールであるCRIUとのチェックポイントデータの相互互換性を維持することで，LinuxとFreeBSD間で同一のプロセスをマイグレーションする仕組みを実現する．本実現法では，FreeBSDカーネルとLinuxカーネルのOS機能の違いだけでなく，内部構造やインタフェース仕様の違いにも着目し，CRIUの各機能と同等の機能をFreeBSD上で実現する際の課題や実装の詳細を述べる．},
-  selected = true,
 }
 
 @inproceedings{bitvisor22, 
