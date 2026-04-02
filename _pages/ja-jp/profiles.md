@@ -30,4 +30,9 @@ profiles:
     content: profile/undergraduate.md
     image_circular: false # crops the image to make it circular
     more_info:
+  - align: left
+    image:
+    content: profile/alumni.md
+    image_circular: false # crops the image to make it circular
+    more_info:
 ---
