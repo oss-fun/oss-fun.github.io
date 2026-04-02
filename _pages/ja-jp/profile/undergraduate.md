@@ -1,9 +1,4 @@
 # 学部
-<img width="200" src="../assets/img/profile/kenta-takahashi.png">
-## 高橋 健太
-知能システムコース・4年
-### 研究内容
-眺望体験の向上を目的とした拡張現実感技術による景観案内の実現
 
 ## 森田 理央
 高度ICTコース・4年

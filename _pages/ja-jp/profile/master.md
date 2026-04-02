@@ -6,13 +6,6 @@
 ### 研究内容
 分散協調OSプロビジョニング実現に向けたP2P型ディスクキャッシュ共有機構
 
-
-<img width="200" src="../assets/img/profile/yuma-sakai.jpeg">
-## 酒井 佑馬
-情報アーキテクチャ領域・博士（前期）課程1年
-### 研究内容
-アドホック型クラウドコンピューティングのための非集中型ノード編成機能に関する研究
-
 <img width="200" src="../assets/img/profile/kotaro-sakamoto.png">
 ## 坂本 光太郎
 高度ICT領域・博士（前期）課程1年
